@@ -1,0 +1,10 @@
+https://www.reddit.com/r/dailyprogrammer/comments/7vm223/20180206_challenge_350_easy_bookshelf_problem/
+
+plan:
+sort shelves biggest to smallest
+sort books biggest to smallest
+
+Fill largest shelf with largest books until the next one does fit.
+Then find the biggest one that would fit in available space.
+Repeat until no other books would fit.
+Move to the next largest shelf and repeat.
