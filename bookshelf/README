@@ -8,3 +8,10 @@ Fill largest shelf with largest books until the next one does fit.
 Then find the biggest one that would fit in available space.
 Repeat until no other books would fit.
 Move to the next largest shelf and repeat.
+
+OUTPUT:
+$ ./bookshelf.py 
+Bookshelf problem
+Shelves: 97
+Books: 115
+Shelves Used: 13
