@@ -1,9 +1,15 @@
 #!/usr/bin/python3
 
+import sys
+
+if len(sys.argv) < 2:
+	print("Syntax: ./bookshelf.py <filename>")
+	exit()
+
 print("Bookshelf problem")
 
-path = 'challenge_input'
-ci = open(path,'r')
+#path = 'example_input'
+ci = open(sys.argv[1],'r')
 line = ci.readline()
 
 # Sort bookshelves from largest to smallest
@@ -11,11 +17,6 @@ shelves = line.split()
 shelves = [int(x) for x in shelves]
 shelves.sort()
 shelves.reverse()
-
-#print("Shelves")
-# Print sorted shelves
-#for shelf in shelves:
-	#print(shelf)
 
 # Create and sort list of books
 books = []
@@ -28,19 +29,14 @@ while line:
 books = [int(x) for x in books]
 books.sort()
 books.reverse()
-#print("Books")
-#for book in books:
-	#print(book)
-
 ci.close()
 
-print("Shelves: " + str(len(shelves)))
-print("Books: " + str(len(books)))
+print("\tShelves: " + str(len(shelves)))
+print("\tBooks: " + str(len(books)))
 
 # How many Shelves
 total_shelves = 0
 
-c = 0
 for shelf in shelves:
 	if len(books) <= 0:
 		break
@@ -60,6 +56,6 @@ for shelf in shelves:
 			break
 
 if len(books) == 0:
-	print("Shelves Used: " + str(total_shelves))
+	print("\tShelves Used: " + str(total_shelves))
 else:
-	print("impossible")
+	print("\timpossible")
